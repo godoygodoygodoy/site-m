@@ -1,0 +1,119 @@
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+/* Tablets e dispositivos médios (768px - 1023px) */
+@media (min-width: 768px) {
+    .bottom-nav {
+        display: none;
+    }
+    
+    .main-content {
+        margin-bottom: 0;
+        padding: var(--spacing-xl) var(--spacing-lg);
+    }
+    
+    .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+}
+
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+    .menu-toggle {
+        display: none;
+    }
+    
+    .navbar-title {
+        margin-left: 0;
+    }
+    
+    .bottom-nav {
+        display: none;
+    }
+    
+    .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+}
+
+/* Mobile pequeno (até 480px) */
+@media (max-width: 480px) {
+    .navbar-content {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .navbar-title {
+        font-size: var(--font-size-lg);
+    }
+    
+    .main-content {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+    
+    .toast-container {
+        left: var(--spacing-sm);
+        right: var(--spacing-sm);
+    }
+    
+    .toast {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .books-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile (até 767px) */
+@media (max-width: 767px) {
+    .hero-search {
+        flex-direction: column;
+    }
+    
+    .livro-main {
+        grid-template-columns: 1fr;
+    }
+    
+    .carrinho-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .cart-item {
+        grid-template-columns: 80px 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .cart-item-quantity,
+    .cart-item-subtotal {
+        grid-column: 2;
+    }
+    
+    .perfil-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .perfil-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .perfil-tabs {
+        flex-direction: column;
+    }
+    
+    .livro-details-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .search-bar {
+        flex-direction: column;
+    }
+    
+    .btn-filter {
+        width: 100%;
+    }
+}

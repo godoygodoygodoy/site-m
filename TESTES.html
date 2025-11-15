@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Testes - Bookshelve</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #f8fafc;
+        }
+        
+        h1 {
+            color: #6366f1;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #64748b;
+            margin-bottom: 40px;
+        }
+        
+        .section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .section h2 {
+            color: #1e293b;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .test-item {
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .test-item h3 {
+            color: #6366f1;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .test-item ol, .test-item ul {
+            margin-left: 20px;
+            color: #475569;
+        }
+        
+        .test-item li {
+            margin-bottom: 8px;
+        }
+        
+        .credential {
+            background: #1e293b;
+            color: #10b981;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #6366f1;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: #4f46e5;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .feature {
+            padding: 15px;
+            background: #f1f5f9;
+            border-radius: 8px;
+            border-left: 4px solid #6366f1;
+        }
+        
+        .feature h4 {
+            color: #1e293b;
+            margin-bottom: 5px;
+        }
+        
+        .feature p {
+            color: #64748b;
+            font-size: 14px;
+        }
+        
+        .warning {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .warning strong {
+            color: #92400e;
+        }
+    </style>
+</head>
+<body>
+    <h1>📘 Guia de Testes - Bookshelve</h1>
+    <p class="subtitle">Siga este guia para testar todas as funcionalidades do sistema</p>
+    
+    <div class="section">
+        <h2>🚀 Como Começar</h2>
+        <p>Para iniciar a aplicação, basta abrir o arquivo <strong>index.html</strong> em seu navegador preferido.</p>
+        <a href="index.html" class="btn">▶️ Abrir Aplicação</a>
+    </div>
+    
+    <div class="section">
+        <h2>🔐 Credenciais de Teste</h2>
+        <p>Use estas credenciais para fazer login e testar o sistema completo:</p>
+        <div class="credential">
+            📧 Email: maria@email.com<br>
+            🔑 Senha: 123456
+        </div>
+        <div class="warning">
+            <strong>💡 Dica:</strong> Na página de login, há um botão "Login Rápido" que preenche automaticamente estas credenciais!
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>✅ Checklist de Testes</h2>
+        
+        <div class="test-item">
+            <h3>1. Navegação Básica</h3>
+            <ul>
+                <li>✓ Abra o menu lateral clicando no ícone de menu (≡)</li>
+                <li>✓ Navegue entre as páginas: Home, Compras, Categorias, Perfil</li>
+                <li>✓ Use o menu inferior (mobile) para navegar</li>
+                <li>✓ Alterne entre tema claro e escuro</li>
+            </ul>
+        </div>
+        
+        <div class="test-item">
+            <h3>2. Busca e Filtros</h3>
+            <ol>
+                <li>Vá para a página "Compras"</li>
+                <li>Digite "Harry Potter" na barra de busca</li>
+                <li>Clique em "Filtrar" para ver os filtros avançados</li>
+                <li>Selecione uma categoria (ex: Fantasia)</li>
+                <li>Teste os filtros de preço e avaliação</li>
+                <li>Experimente diferentes ordenações</li>
+            </ol>
+        </div>
+        
+        <div class="test-item">
+            <h3>3. Visualizar Livro</h3>
+            <ol>
+                <li>Clique em qualquer livro da listagem</li>
+                <li>Veja os detalhes completos do livro</li>
+                <li>Role para ver as avaliações</li>
+                <li>Observe os livros similares no final da página</li>
+            </ol>
+        </div>
+        
+        <div class="test-item">
+            <h3>4. Sistema de Favoritos</h3>
+            <ol>
+                <li>Clique no ícone de coração em qualquer livro</li>
+                <li>Veja a notificação de sucesso</li>
+                <li>Vá para a página "Favoritos" no menu</li>
+                <li>Veja seus livros favoritos</li>
+                <li>Remova um favorito clicando no coração novamente</li>
+            </ol>
+        </div>
+        
+        <div class="test-item">
+            <h3>5. Carrinho de Compras</h3>
+            <ol>
+                <li>Adicione vários livros ao carrinho</li>
+                <li>Observe o badge no ícone do carrinho aumentando</li>
+                <li>Acesse a página do "Carrinho"</li>
+                <li>Ajuste as quantidades dos livros</li>
+                <li>Remova um item do carrinho</li>
+                <li>Veja o cálculo automático do total</li>
+            </ol>
+        </div>
+        
+        <div class="test-item">
+            <h3>6. Sistema de Login/Cadastro</h3>
+            <h4>Login:</h4>
+            <ol>
+                <li>Vá para a página "Perfil" (sem estar logado)</li>
+                <li>Será redirecionado para o login</li>
+                <li>Use as credenciais de teste ou clique em "Login Rápido"</li>
+                <li>Observe a mensagem de boas-vindas</li>
+            </ol>
+            
+            <h4>Cadastro:</h4>
+            <ol>
+                <li>Na página de login, clique em "Criar Conta"</li>
+                <li>Preencha o formulário com seus dados</li>
+                <li>Crie uma nova conta</li>
+                <li>Será logado automaticamente</li>
+            </ol>
+        </div>
+        
+        <div class="test-item">
+            <h3>7. Sistema de Reviews</h3>
+            <ol>
+                <li>Faça login (necessário para avaliar)</li>
+                <li>Acesse qualquer página de livro</li>
+                <li>Role até a seção de avaliações</li>
+                <li>Clique nas estrelas para dar uma nota (1-5)</li>
+                <li>Escreva um comentário (opcional)</li>
+                <li>Envie a avaliação</li>
+                <li>Veja sua avaliação aparecer na lista</li>
+            </ol>
+        </div>
+        
+        <div class="test-item">
+            <h3>8. Perfil do Usuário</h3>
+            <ol>
+                <li>Estando logado, vá para "Perfil"</li>
+                <li>Veja suas estatísticas (compras, avaliações, favoritos)</li>
+                <li>Clique em "Histórico de Compras" para ver compras anteriores</li>
+                <li>Clique em "Minhas Avaliações" para ver suas reviews</li>
+                <li>Clique em "Meus Favoritos" para ver seus livros favoritos</li>
+            </ol>
+        </div>
+        
+        <div class="test-item">
+            <h3>9. Finalizar Compra</h3>
+            <ol>
+                <li>Adicione livros ao carrinho</li>
+                <li>Vá para o carrinho</li>
+                <li>Teste o cupom "PRIMEIRACOMPRA" (10% de desconto)</li>
+                <li>Clique em "Finalizar Compra"</li>
+                <li>Se não estiver logado, será direcionado ao login</li>
+                <li>Após login, a compra é processada</li>
+                <li>Veja a compra no histórico do seu perfil</li>
+            </ol>
+        </div>
+        
+        <div class="test-item">
+            <h3>10. Categorias</h3>
+            <ol>
+                <li>Vá para a página "Categorias"</li>
+                <li>Veja todas as categorias disponíveis</li>
+                <li>Clique em uma categoria</li>
+                <li>Será direcionado para a página de compras filtrada</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>🎨 Recursos para Testar</h2>
+        <div class="feature-grid">
+            <div class="feature">
+                <h4>🌙 Tema Escuro</h4>
+                <p>Clique no ícone de lua/sol no topo da página</p>
+            </div>
+            <div class="feature">
+                <h4>📱 Responsividade</h4>
+                <p>Redimensione a janela do navegador ou use DevTools</p>
+            </div>
+            <div class="feature">
+                <h4>🔔 Notificações</h4>
+                <p>Aparecem no canto superior direito em ações importantes</p>
+            </div>
+            <div class="feature">
+                <h4>⚡ Navegação SPA</h4>
+                <p>Páginas carregam sem reload completo</p>
+            </div>
+            <div class="feature">
+                <h4>💾 Persistência</h4>
+                <p>Dados salvos mesmo após fechar o navegador</p>
+            </div>
+            <div class="feature">
+                <h4>🎭 Animações</h4>
+                <p>Transições suaves em todas as interações</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>🐛 Testando em Diferentes Dispositivos</h2>
+        <div class="test-item">
+            <h3>Desktop (Chrome/Firefox/Edge)</h3>
+            <ul>
+                <li>Pressione F12 para abrir DevTools</li>
+                <li>Clique no ícone de dispositivo móvel</li>
+                <li>Selecione diferentes resoluções</li>
+                <li>Teste todas as funcionalidades</li>
+            </ul>
+        </div>
+        
+        <div class="test-item">
+            <h3>Mobile (Smartphone/Tablet)</h3>
+            <ul>
+                <li>Compartilhe o link ou acesse diretamente</li>
+                <li>Teste a navegação com touch</li>
+                <li>Verifique o menu inferior</li>
+                <li>Teste gestos de scroll</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>💡 Dicas Adicionais</h2>
+        <ul style="color: #475569; margin-left: 20px;">
+            <li>Abra o Console do navegador (F12) para ver logs e possíveis erros</li>
+            <li>Limpe o localStorage para resetar dados: <code>localStorage.clear()</code></li>
+            <li>O sistema salva automaticamente carrinho, favoritos e sessão</li>
+            <li>Experimente diferentes combinações de filtros na página de compras</li>
+            <li>Teste o comportamento em modo offline (sem internet)</li>
+        </ul>
+    </div>
+    
+    <div class="section" style="text-align: center; background: linear-gradient(135deg, #6366f1, #818cf8); color: white;">
+        <h2 style="color: white; border: none;">🎉 Pronto para Começar!</h2>
+        <p style="font-size: 18px; margin: 20px 0;">Clique no botão abaixo para abrir a aplicação</p>
+        <a href="index.html" class="btn" style="background: white; color: #6366f1;">🚀 Iniciar Bookshelve</a>
+    </div>
+</body>
+</html>

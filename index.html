@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelve - Sua Livraria Online</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div id="loading" class="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Main App Container -->
+    <div id="app" class="app-container">
+        <!-- Top Navigation Bar -->
+        <nav id="navbar" class="navbar">
+            <div class="navbar-content">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="navbar-title" id="pageTitle">BOOKSHELVE</h1>
+                <div class="navbar-actions">
+                    <button class="theme-toggle" id="themeToggle" title="Alternar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="notification-btn" id="notificationBtn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">0</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Side Menu -->
+        <aside id="sideMenu" class="side-menu">
+            <div class="side-menu-header">
+                <img src="assets/logo.png" alt="Bookshelve" class="side-menu-logo" onerror="this.style.display='none'">
+                <h2>Bookshelve</h2>
+                <button class="close-menu" id="closeMenu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="side-menu-user" id="sideMenuUser">
+                <!-- User info will be injected here -->
+            </div>
+            <nav class="side-menu-nav">
+                <a href="#home" class="side-menu-link active" data-page="home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#compras" class="side-menu-link" data-page="compras">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>Compras</span>
+                </a>
+                <a href="#categorias" class="side-menu-link" data-page="categorias">
+                    <i class="fas fa-list"></i>
+                    <span>Categorias</span>
+                </a>
+                <a href="#favoritos" class="side-menu-link" data-page="favoritos">
+                    <i class="fas fa-heart"></i>
+                    <span>Favoritos</span>
+                </a>
+                <a href="#perfil" class="side-menu-link" data-page="perfil">
+                    <i class="fas fa-user"></i>
+                    <span>Perfil</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main id="mainContent" class="main-content">
+            <!-- Content will be dynamically loaded here -->
+        </main>
+
+        <!-- Bottom Navigation (Mobile) -->
+        <nav id="bottomNav" class="bottom-nav">
+            <a href="#home" class="bottom-nav-item active" data-page="home">
+                <div class="bottom-nav-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <span>Home</span>
+            </a>
+            <a href="#categorias" class="bottom-nav-item" data-page="categorias">
+                <div class="bottom-nav-icon">
+                    <i class="fas fa-list"></i>
+                </div>
+                <span>Categorias</span>
+            </a>
+            <a href="#carrinho" class="bottom-nav-item" data-page="carrinho">
+                <div class="bottom-nav-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </div>
+                <span>Carrinho</span>
+            </a>
+            <a href="#perfil" class="bottom-nav-item" data-page="perfil">
+                <div class="bottom-nav-icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <span>Perfil</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Modal Container -->
+    <div id="modalContainer"></div>
+
+    <!-- Toast Container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/pages/home.js"></script>
+    <script src="js/pages/compras.js"></script>
+    <script src="js/pages/livro.js"></script>
+    <script src="js/pages/categorias.js"></script>
+    <script src="js/pages/perfil.js"></script>
+    <script src="js/pages/carrinho.js"></script>
+    <script src="js/pages/login.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

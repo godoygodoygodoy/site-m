@@ -1,0 +1,201 @@
+```
+📘 BOOKSHELVE - Estrutura do Projeto
+=====================================
+
+site-m/
+│
+├── 📄 index.html                    # Página principal da aplicação
+├── 📄 TESTES.html                   # Guia interativo de testes
+├── 📄 README.md                     # Documentação principal
+├── 📄 CHANGELOG.md                  # Histórico de versões
+├── 📄 ROADMAP.md                    # Planejamento futuro
+│
+├── 📁 css/                          # Estilos da aplicação
+│   ├── styles.css                  # Estilos base e componentes (550+ linhas)
+│   ├── pages.css                   # Estilos específicos das páginas (600+ linhas)
+│   ├── responsive.css              # Media queries para responsividade
+│   └── animations.css              # Animações e transições
+│
+├── 📁 js/                           # Lógica da aplicação
+│   ├── config.js                   # Configurações globais
+│   ├── data.js                     # Banco de dados mockado (12 livros, 10 categorias)
+│   ├── auth.js                     # Sistema de autenticação
+│   ├── utils.js                    # Funções utilitárias e serviços
+│   ├── components.js               # Componentes reutilizáveis
+│   ├── router.js                   # Sistema de rotas SPA
+│   ├── app.js                      # Inicialização da aplicação
+│   │
+│   └── 📁 pages/                    # Páginas da aplicação
+│       ├── home.js                 # Página inicial
+│       ├── compras.js              # Listagem e filtros
+│       ├── livro.js                # Detalhes do livro
+│       ├── categorias.js           # Todas as categorias
+│       ├── perfil.js               # Perfil do usuário
+│       ├── carrinho.js             # Carrinho de compras
+│       └── login.js                # Login e cadastro
+│
+└── 📁 assets/                       # Recursos estáticos
+    └── README.md                   # Instruções sobre assets
+
+
+ESTATÍSTICAS DO PROJETO
+========================
+
+📊 Linhas de Código:
+   - HTML: ~400 linhas
+   - CSS: ~2000+ linhas
+   - JavaScript: ~3500+ linhas
+   - TOTAL: ~5900+ linhas
+
+📦 Arquivos:
+   - Total: 22 arquivos
+   - HTML: 2 arquivos
+   - CSS: 4 arquivos
+   - JavaScript: 15 arquivos
+   - Markdown: 4 arquivos
+
+🎨 Componentes:
+   - 10+ componentes reutilizáveis
+   - 8 páginas completas
+   - 4 temas de cores (light/dark)
+   - Animações em todos os elementos
+
+⚙️ Funcionalidades:
+   ✅ Sistema de autenticação
+   ✅ Carrinho de compras
+   ✅ Sistema de favoritos
+   ✅ Reviews com estrelas
+   ✅ Busca e filtros avançados
+   ✅ Perfil de usuário
+   ✅ Histórico de compras
+   ✅ Tema claro/escuro
+   ✅ Notificações toast
+   ✅ Responsivo (mobile/tablet/desktop)
+
+
+TECNOLOGIAS UTILIZADAS
+======================
+
+Frontend:
+   - HTML5 (Semântico)
+   - CSS3 (Grid, Flexbox, Variables)
+   - JavaScript ES6+ (Vanilla)
+   
+APIs do Navegador:
+   - LocalStorage API
+   - History API
+   - DOM API
+   
+Recursos Externos:
+   - Font Awesome 6.4.0
+   - Google Fonts (System fonts)
+   - Imagens via Amazon CDN
+
+
+PÁGINAS E ROTAS
+================
+
+🏠 /#home          → Página inicial
+🛍️ /#compras        → Listagem de livros
+📖 /#livro/:id     → Detalhes do livro
+📂 /#categorias    → Todas as categorias
+👤 /#perfil        → Perfil do usuário
+🛒 /#carrinho      → Carrinho de compras
+🔐 /#login         → Login/Cadastro
+❤️ /#favoritos     → Livros favoritos
+
+
+DADOS MOCKADOS
+==============
+
+📚 Livros: 12
+   - Ficção: 4
+   - Clássicos: 2
+   - Fantasia: 3
+   - HQs: 1
+   - Romance: 1
+   - Outros: 1
+
+🗂️ Categorias: 10
+   - Ficção
+   - Clássicos
+   - Literatura Brasileira
+   - HQs e Mangás
+   - Fantasia
+   - Suspense
+   - Romance
+   - Autoajuda
+   - Biografias
+   - Negócios
+
+👥 Usuários: 3
+   - maria@email.com
+   - joao@email.com
+   - ana@email.com
+
+⭐ Reviews: 7 avaliações de exemplo
+
+
+CREDENCIAIS DE TESTE
+=====================
+
+Email: maria@email.com
+Senha: 123456
+
+(Ou use o botão "Login Rápido" na página de login)
+
+
+COMO INICIAR
+=============
+
+1. Abra o arquivo: index.html
+2. Ou abra: TESTES.html (guia completo)
+3. Não precisa de servidor ou instalações!
+
+
+BROWSER SUPPORT
+================
+
+✅ Chrome (últimas versões)
+✅ Firefox (últimas versões)
+✅ Safari (últimas versões)
+✅ Edge (últimas versões)
+✅ Opera (últimas versões)
+
+📱 Mobile:
+✅ iOS Safari
+✅ Chrome Mobile
+✅ Firefox Mobile
+
+
+PRÓXIMOS PASSOS
+================
+
+Consulte:
+   - ROADMAP.md para funcionalidades futuras
+   - CHANGELOG.md para histórico de versões
+   - README.md para documentação completa
+
+
+LICENÇA
+========
+
+MIT License - Código aberto e gratuito
+
+
+DESENVOLVIDO COM
+=================
+
+❤️ Paixão
+☕ Café
+🎵 Música
+💻 VS Code
+🚀 Dedicação
+
+
+=====================================
+Versão: 1.0.0
+Data: Novembro 2025
+Status: ✅ Produção
+=====================================
+```
