@@ -5,10 +5,11 @@ import { successResponse, errorResponse } from '@/lib/api-response'
 // GET /api/raffle/[id] - Get raffle by ID
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: { id: string } }
 ) {
   try {
-    const raffleId = parseInt(params.id)
+    const { id } = context.params
+    const raffleId = parseInt(id)
 
     if (isNaN(raffleId)) {
       return NextResponse.json(

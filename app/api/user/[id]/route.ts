@@ -7,10 +7,11 @@ import { successResponse, errorResponse } from '@/lib/api-response'
 // GET /api/user/[id] - Get user by ID
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: { id: string } }
 ) {
   try {
-    const userId = parseInt(params.id)
+    const { id } = context.params
+    const userId = parseInt(id)
 
     if (isNaN(userId)) {
       return NextResponse.json(
@@ -58,10 +59,11 @@ export async function GET(
 // PUT /api/user/[id] - Update user
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: { id: string } }
 ) {
   try {
-    const userId = parseInt(params.id)
+    const { id } = context.params
+    const userId = parseInt(id)
 
     if (isNaN(userId)) {
       return NextResponse.json(
@@ -139,10 +141,11 @@ export async function PUT(
 // DELETE /api/user/[id] - Delete user
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: { id: string } }
 ) {
   try {
-    const userId = parseInt(params.id)
+    const { id } = context.params
+    const userId = parseInt(id)
 
     if (isNaN(userId)) {
       return NextResponse.json(

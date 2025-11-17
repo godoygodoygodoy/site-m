@@ -5,12 +5,13 @@ import { successResponse, errorResponse } from '@/lib/api-response'
 // GET /api/review/user/[userId] - Get all reviews by a user
 export async function GET(
   request: NextRequest,
-  { params }: { params: { userId: string } }
+  context: { params: { userId: string } }
 ) {
   try {
-    const userId = parseInt(params.userId)
+    const { userId } = context.params
+    const userIdParsed = parseInt(userId)
 
-    if (isNaN(userId)) {
+    if (isNaN(userIdParsed)) {
       return NextResponse.json(
         errorResponse('ID inválido'),
         { status: 400 }
@@ -18,7 +19,7 @@ export async function GET(
     }
 
     const reviews = await prisma.review.findMany({
-      where: { userId },
+      where: { userId: userIdParsed },
       include: {
         book: {
           select: {

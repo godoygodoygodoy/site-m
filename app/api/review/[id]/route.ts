@@ -5,10 +5,11 @@ import { successResponse, errorResponse } from '@/lib/api-response'
 // DELETE /api/review/[id] - Delete review
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: { id: string } }
 ) {
   try {
-    const reviewId = parseInt(params.id)
+    const { id } = context.params
+    const reviewId = parseInt(id)
 
     if (isNaN(reviewId)) {
       return NextResponse.json(

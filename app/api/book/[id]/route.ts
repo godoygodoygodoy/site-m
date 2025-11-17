@@ -6,10 +6,11 @@ import { successResponse, errorResponse } from '@/lib/api-response'
 // GET /api/book/[id] - Get book by ID
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: { id: string } }
 ) {
   try {
-    const bookId = parseInt(params.id)
+    const { id } = context.params
+    const bookId = parseInt(id)
 
     if (isNaN(bookId)) {
       return NextResponse.json(
@@ -57,10 +58,11 @@ export async function GET(
 // PUT /api/book/[id] - Update book
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: { id: string } }
 ) {
   try {
-    const bookId = parseInt(params.id)
+    const { id } = context.params
+    const bookId = parseInt(id)
 
     if (isNaN(bookId)) {
       return NextResponse.json(
@@ -112,10 +114,11 @@ export async function PUT(
 // DELETE /api/book/[id] - Delete book
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: { id: string } }
 ) {
   try {
-    const bookId = parseInt(params.id)
+    const { id } = context.params
+    const bookId = parseInt(id)
 
     if (isNaN(bookId)) {
       return NextResponse.json(
