@@ -1,0 +1,42 @@
+{
+  "name": "bookshelve",
+  "version": "1.0.0",
+  "description": "WebApp de compras e reviews de livros",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio",
+    "prisma:push": "prisma db push",
+    "prisma:seed": "node prisma/seed-nextjs.js"
+  },
+  "keywords": [
+    "books",
+    "e-commerce",
+    "reviews"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^6.19.0",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.5",
+    "autoprefixer": "^10.4.22",
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^16.3.1",
+    "next": "^16.0.3",
+    "postcss": "^8.5.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwindcss": "^4.1.17",
+    "typescript": "^5.9.3",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "prisma": "^6.19.0"
+  }
+}
